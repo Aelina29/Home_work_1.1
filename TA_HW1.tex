@@ -1,0 +1,132 @@
+
+\documentclass[a4paper,14pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage[left=3cm,right=3cm,
+    top=2cm,bottom=2cm]{geometry}
+%\setlength{\oddsidemargin}{0cm}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+
+\title{Теория алгоритмов
+
+Домашнее задание 1
+
+Часть 1}
+\author{Кондратьева Аэлина 2.9}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+%\section{Задание 1}
+
+\textbf{Задан алфавит $\Sigma = \{a,b\}$}\\\\
+\textbf{1)}$ \left\{
+\begin{aligned}
+&b \rightarrow a \\
+&a \rightarrow \epsilon \\
+\end{aligned}
+\right.$
+\\
+a ) $aaaa\Rightarrow aaa$\\
+b ) $bbbbb\Rightarrow abbbb\Rightarrow aabbb\Rightarrow aaabb\Rightarrow aaaab\Rightarrow aaaaa => aaa$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow aaabababa\Rightarrow aaaaababa\Rightarrow aaaaaaaba\Rightarrow aaaaaaaaa\Rightarrow aaaaaaaa$\\
+e ) $bbbabaaabbb\Rightarrow abbabaaabbb\Rightarrow aababaaabbb\Rightarrow ...\Rightarrow aaaaaaaaaaa\Rightarrow aaaaaaaaaa$\\
+f ) $aabbaaabbba\Rightarrow aaabaaabbba\Rightarrow ...\Rightarrow aaaaaaaaaaa\Rightarrow aaaaaaaaaa$\\
+g ) $bbababaaaa\Rightarrow abababaaaa\Rightarrow ...\Rightarrow aaaaaaaaaa\Rightarrow aaaaaaaaa$\\
+h ) $bababaaabb\Rightarrow aababaaabb\Rightarrow ...\Rightarrow aaaaaaaaaa\Rightarrow aaaaaaaaa$\\
+\\\\
+\textbf{2)}$ \left\{
+\begin{aligned}
+&bab \rightarrow a \\
+&a \rightarrow .b \\
+\end{aligned}
+\right.$
+\\\\
+a ) $aaaa\Rightarrow baaa$\\
+b ) $bbbbb$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow aaababa\Rightarrow aaaaa\Rightarrow baaaa$\\
+e ) $bbbabaaabbb\Rightarrow bbaaaabbb\Rightarrow bbbaaabbb$\\
+f ) $aabbaaabbba\Rightarrow babbaaabbba$\\
+g ) $bbababaaaa\Rightarrow baabaaaa\Rightarrow bbabaaaa$\\
+h ) $bababaaabb\Rightarrow aabaaabb\Rightarrow babaaabb$\\
+\\\\
+\textbf{3)}
+$ \left\{
+\begin{aligned}
+&bba \rightarrow ab \\
+&ab \rightarrow a \\
+&b \rightarrow \varepsilon \\
+\end{aligned}
+\right.$
+\\
+a ) $aaaa\Rightarrow aaa\Rightarrow aa\Rightarrow a \Rightarrow \epsilon$\\
+b ) $bbbbb\Rightarrow bbbb\Rightarrow bbb\Rightarrow bb\Rightarrow b\Rightarrow\epsilon$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow aabababa\Rightarrow aaababa\Rightarrow aaaaba\Rightarrow aaaaa$\\
+e ) $bbbabaaabbb\Rightarrow babbaaabbb\Rightarrow baabaabbb\Rightarrow baaaabbb\Rightarrow baaaabb\Rightarrow baaaab\Rightarrow baaaa\Rightarrow aaaa$\\
+f ) $aabbaaabbba\Rightarrow aaabaabbba\Rightarrow aaabaabab\Rightarrow aaaaabab\Rightarrow aaaaaab\Rightarrow aaaaaa$\\
+g ) $bbababaaaa\Rightarrow abbabaaaa\Rightarrow aabbaaaa\Rightarrow aaabaaa\Rightarrow aaaaaa$\\
+h ) $bababaaabb\Rightarrow baabaaabb\Rightarrow baaaaabb\Rightarrow baaaaab\Rightarrow baaaaa\Rightarrow aaaaa$\\
+\\\\
+\textbf{4)}$ \left\{
+\begin{aligned}
+&ba \rightarrow ab \\
+&ab \rightarrow a \\
+&a \rightarrow \varepsilon \\
+\end{aligned}
+\right.$
+\\
+a ) $aaaa\Rightarrow aaa\Rightarrow aa\Rightarrow a\Rightarrow \epsilon$\\
+b ) $bbbbb$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow aabbababa\Rightarrow aababbaba\Rightarrow aaabbbaba\Rightarrow aaabbabba\Rightarrow aaababbba\Rightarrow aaaabbbba\Rightarrow aaaabbbab\Rightarrow aaaabbabb\Rightarrow aaaababbb\Rightarrow aaaaabbbb\Rightarrow aaaaabbb\Rightarrow aaaaabb\Rightarrow aaaaab\Rightarrow aaaaa\Rightarrow aaaa\Rightarrow...\Rightarrow\epsilon$\\
+e ) $bbbabaaabbb\Rightarrow bbabbaaabbb\Rightarrow babbbaaabbb\Rightarrow abbbbaaabbb\Rightarrow abbbabaabbb\Rightarrow...\Rightarrow aabbbbaabbb\Rightarrow aabbbababbb\Rightarrow ...\Rightarrow aabbabbabbb\Rightarrow aababbbabbb\Rightarrow aaabbbbabbb\Rightarrow aaabbbabbbb\Rightarrow...\Rightarrow aaabbabbbbb\Rightarrow...\Rightarrow aaaabbbbbbb\Rightarrow aaaabbbbbb\Rightarrow...\Rightarrow aaaa\Rightarrow aaa\Rightarrow...\Rightarrow\epsilon$\\
+f ) $aabbaaabbba\Rightarrow aababaabbba\Rightarrow aaabbaabbba\Rightarrow aaabababbba\Rightarrow aaaabbabbba\Rightarrow aaaababbbba\Rightarrow aaaaabbbbba\Rightarrow aaaaabbbbab\Rightarrow...\Rightarrow aaaaaabbbbb\Rightarrow aaaaaabbbb\Rightarrow...\Rightarrow aaaaaa\Rightarrow aaaaa\Rightarrow...\Rightarrow\epsilon$\\
+g ) $bbababaaaa\Rightarrow babbabaaaa\Rightarrow abbbabaaaa\Rightarrow abbabbaaaa\Rightarrow ababbbaaaa\Rightarrow aabbbbaaaa\Rightarrow aabbbabaaa\Rightarrow...\Rightarrow aaabbbbaaa\Rightarrow aaabbbabaa\Rightarrow...\Rightarrow aaaabbbbaa\Rightarrow aaaabbbaba\Rightarrow...\Rightarrow aaaaabbbba\Rightarrow aaaaabbbab\Rightarrow...\Rightarrow aaaaaabbbb\Rightarrow aaaaaabbb\Rightarrow...\Rightarrow aaaaaa\Rightarrow aaaaa\Rightarrow...\Rightarrow\epsilon$\\
+h ) $bababaaabb\Rightarrow abbabaaabb\Rightarrow ababbaaabb\Rightarrow aabbbaaabb\Rightarrow aabbabaabb\Rightarrow...\Rightarrow aaabbbaabb\Rightarrow aaabbababb\Rightarrow aaababbabb\Rightarrow aaaabbbabb\Rightarrow aaaabbabbb\Rightarrow...\Rightarrow aaaaabbbbb\Rightarrow aaaaabbbb\Rightarrow...\Rightarrow aaaaa\Rightarrow aaaa\Rightarrow...\Rightarrow\epsilon$\\
+\\\\
+\textbf{5)}$ \left\{
+\begin{aligned}
+&aa \rightarrow a \\
+&bb \rightarrow b \\
+&ab \rightarrow b\\
+&a \rightarrow .\varepsilon \\
+\end{aligned}
+\right.$
+\\
+a ) $aaaa\Rightarrow aaa\Rightarrow aa\Rightarrow a\Rightarrow\epsilon$\\
+b ) $bbbbb\Rightarrow bbbb\Rightarrow bbb\Rightarrow bb\Rightarrow b$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow babababa\Rightarrow bbababa\Rightarrow bababa\Rightarrow bbaba\Rightarrow baba\Rightarrow bba\Rightarrow ba\Rightarrow b$\\
+e ) $bbbabaaabbb\Rightarrow bbbabaabbb\Rightarrow bbbababbb\Rightarrow bbababbb\Rightarrow bababbb\Rightarrow bababb\Rightarrow babab\Rightarrow bbab\Rightarrow bab\Rightarrow bb\Rightarrow b$\\
+f ) $aabbaaabbba\Rightarrow abbaaabbba\Rightarrow abbaabbba\Rightarrow abbabbba\Rightarrow ababbba\Rightarrow ababba\Rightarrow ababa\Rightarrow baba\Rightarrow bba\Rightarrow ba\Rightarrow b$\\
+g ) $bbababaaaa\Rightarrow bbababaaa\Rightarrow bbababaa\Rightarrow bbababa\Rightarrow bababa\Rightarrow bbaba\Rightarrow baba\Rightarrow bba\Rightarrow ba\Rightarrow b$\\
+h ) $bababaaabb\Rightarrow bababaabb\Rightarrow babababb\Rightarrow bababab\Rightarrow bbabab\Rightarrow babab\Rightarrow bbab\Rightarrow bab\Rightarrow bb\Rightarrow b$\\
+\\\\
+\textbf{6)}$ \left\{
+\begin{aligned}
+&aa \rightarrow a \\
+&b \rightarrow bb \\
+&a \rightarrow .b\\
+\end{aligned}
+\right.$
+\\
+a ) $aaaa\Rightarrow aaa\Rightarrow aa\Rightarrow a\Rightarrow b$\\
+b ) $bbbbb\Rightarrow bbbbbb\Rightarrow bbbbbbb\Rightarrow...$\\
+с ) $\epsilon$\\
+d ) $ababababa\Rightarrow abbabababa\Rightarrow abbbabababa\Rightarrow...$\\
+e ) $bbbabaaabbb\Rightarrow bbbabaabbb\Rightarrow bbbababbb\Rightarrow bbbbababbb\Rightarrow bbbbbababbb\Rightarrow...$\\
+f ) $aabbaaabbba\Rightarrow abbaaabbba\Rightarrow abbaabbba\Rightarrow abbabbba\Rightarrow abbbabbba\Rightarrow abbbbabbba\Rightarrow...$\\
+g ) $bbababaaaa\Rightarrow bbababaaa\Rightarrow bbababaa\Rightarrow bbababa\Rightarrow bbbababa\Rightarrow bbbbababa\Rightarrow...$\\
+h ) $bababaaabb\Rightarrow bababaabb\Rightarrow babababb\Rightarrow bbabababb\Rightarrow bbbabababb\Rightarrow...$\\
+\\\\
+
+\end{document}
